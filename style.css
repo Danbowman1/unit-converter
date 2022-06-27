@@ -5,23 +5,28 @@
 }
 
 body {
-    background-color: #1C1C1C;;
     height: 100vh;
-    width: 100%;
+    background-color: #1C1C1C;;
     position: relative;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .container {
-    width: 550px;
-    height: 729px;
+    width: 75%;
+    max-width: 550px;
+    min-width: 355px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-self: center;
     border: 1px solid black;
     background-color: #1F2937;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .topContainer {
@@ -54,6 +59,10 @@ input {
     color: white;
 }
 
+input:focus {
+    outline: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -68,8 +77,46 @@ button {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
+    transition: all 500ms ease; 
 }
 
-.bottomContainer {
-    
+button:hover {
+    opacity: 80%;
 }
+
+
+.bottomContainer {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subContainers {
+    width: 100%;
+    max-width: 500px;
+    padding: 6.5% 16%;
+    margin-bottom: 23.5px;
+    background-color: #273549;
+}
+
+.subContainers:last-child {
+    margin-bottom: 0;
+}
+
+.subContainers p {
+    margin-bottom: 10px;
+    color: #CCC1FF;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.stats {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
